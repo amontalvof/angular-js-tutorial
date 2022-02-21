@@ -20,10 +20,34 @@ myNinjaApp.controller('NinjaController', [
             $scope.newNinja.rate = '';
         };
         $scope.ninjas = [
-            { name: 'yoshi', belt: 'green', rate: 50, available: true },
-            { name: 'crystal', belt: 'yellow', rate: 30, available: true },
-            { name: 'ryu', belt: 'orange', rate: 10, available: false },
-            { name: 'shaun', belt: 'black', rate: 1000, available: true },
+            {
+                name: 'yoshi',
+                belt: 'green',
+                rate: 50,
+                available: true,
+                thumb: 'content/img/yoshi.png',
+            },
+            {
+                name: 'crystal',
+                belt: 'yellow',
+                rate: 30,
+                available: true,
+                thumb: 'content/img/crystal.png',
+            },
+            {
+                name: 'ryu',
+                belt: 'orange',
+                rate: 10,
+                available: false,
+                thumb: 'content/img/ryu.png',
+            },
+            {
+                name: 'shaun',
+                belt: 'black',
+                rate: 1000,
+                available: true,
+                thumb: 'content/img/shaun.png',
+            },
         ];
     },
 ]);

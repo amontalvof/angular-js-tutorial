@@ -22,6 +22,15 @@
                         ng-repeat="ninja in ninjas | orderBy: order| filter:search"
                         ng-show="ninja.available"
                     >
+                        <img
+                            ng-src="{{ninja.thumb}}"
+                            ng-show="ninja.thumb"
+                            style="
+                                margin: -12px 10px 0 0;
+                                float: left;
+                                width: 50px;
+                            "
+                        />
                         <h3>{{ninja.name}} - {{ninja.rate | currency: '£'}}</h3>
                         <div ng-click="removeNinja(ninja)" class="remove">
                             x
