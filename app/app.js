@@ -1,4 +1,19 @@
-const myNinjaApp = angular.module('myNinjaApp', []);
+const myNinjaApp = angular.module('myNinjaApp', ['ngRoute']);
+
+myNinjaApp.config([
+    '$routeProvider',
+    function ($routeProvider) {
+        $routeProvider
+            .when('/home', {
+                templateUrl: 'views/home.html',
+            })
+            .when('/directory', {
+                templateUrl: 'views/directory.html',
+                controller: 'NinjaController',
+            })
+            .otherwise({ redirectTo: '/home' });
+    },
+]);
 
 myNinjaApp.controller('NinjaController', [
     '$scope',
