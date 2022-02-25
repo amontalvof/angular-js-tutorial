@@ -6,12 +6,29 @@ myNinjaApp.config([
         $routeProvider
             .when('/home', {
                 templateUrl: 'views/home.html',
+                controller: 'NinjaController',
             })
             .when('/directory', {
                 templateUrl: 'views/directory.html',
                 controller: 'NinjaController',
             })
             .otherwise({ redirectTo: '/home' });
+    },
+]);
+
+myNinjaApp.directive('randomNinja', [
+    function () {
+        return {
+            restrict: 'E',
+            scope: {
+                ninjas: '=',
+                title: '=',
+            },
+            templateUrl: 'views/random.html',
+            controller: function ($scope) {
+                $scope.random = Math.floor(Math.random() * 4);
+            },
+        };
     },
 ]);
 
