@@ -1,5 +1,8 @@
-<div style="text-align: center">
-    <h4>{{title}}</h4>
-    <img ng-src="{{ninjas[random].thumb}}" style="width: 50px" />
-    <p>{{ninjas[random].name}}</p>
-</div>
+<section>
+    <div style="text-align: center">
+        <h4>{{title}}</h4>
+        <div ng-transclude></div>
+        <img ng-src="{{ninjas[random].thumb}}" style="width: 50px" />
+        <p>{{ninjas[random].name}}</p>
+    </div>
+</section>
